@@ -4,6 +4,7 @@ A professional portfolio website for **Christopher Mwangi**, a Data & Workflow A
 Engineer specialising in microfinance automation, Python RPA, n8n orchestration, and
 financial data systems.
 
+https://chrismwangi022-beep.github.io/christopher-portfolio/
 ---
 
 ## What This Portfolio Represents
