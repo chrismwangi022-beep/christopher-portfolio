@@ -149,16 +149,19 @@ financial data systems.
 ## What This Portfolio Represents
 
 Christopher builds automation systems that transform manual financial operations into
-efficient digital workflows. This portfolio showcases four major project areas:
+efficient digital workflows. This portfolio showcases applied work across AI automation,
+financial data systems, statistical modelling, workflow automation,
+and data-driven research.
 
-| Project | What it solves |
+| Project | What it demonstrates |
 |---|---|
-| Arrears Analytics Dashboard | Real-time portfolio health visibility for credit risk teams |
-| Automated Financial Reporting Engine | Daily Excel report generation and WhatsApp distribution |
-| Selenium Loan Booking Automation | Eliminates 4+ hours of manual loan entry per day |
-| Bulk SMS Collections Automation | Consistent, segmented customer communication at scale |
-
----
+| AI Marketing & Social Media Automation Platform | Generative AI, Python, n8n, API integration and automated content workflows |
+| Arrears Analytics & Financial Intelligence System | Financial data analysis, Python automation and portfolio monitoring |
+| Automated Financial Reporting Engine | Data processing, reporting automation and WhatsApp distribution |
+| Selenium Loan Booking Automation | Python RPA and financial workflow automation |
+| Bulk SMS Collections Automation | Segmented communication and operational automation |
+| Hidden Markov Model Statistical Project | Statistical modelling, time-series analysis and machine learning concepts |
+| Socioeconomic & Community Data Research | Survey data, field research, data quality and statistical analysis |
 
 ## Technologies Used
 

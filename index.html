@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Christopher Mwangi – FinTech Automation Engineer specialising in Python automation, Selenium RPA, n8n workflows, and microfinance data systems." />
-  <title>Christopher Mwangi · FinTech Automation Engineer</title>
+  <meta name="description" content="Christopher Mwangi – Data, AI & Automation Engineer specialising in Python automation, Selenium RPA, n8n workflows, and microfinance data systems." />
+  <title>Christopher Mwangi · Data, AI & Automation Engineer</title>
   <link rel="stylesheet" href="style.css" />
   <!-- Google Fonts: Space Grotesk (display) + Inter (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -67,12 +67,12 @@
       </h1>
 
       <p class="hero__title" data-reveal>
-        FinTech Automation Engineer<br />
-        <span class="hero__title-sub">Building production systems for microfinance operations</span>
+        Data, AI & Automation Engineer<br />
+        <span class="hero__title-sub">Building data-driven systems with Python, AI and automation for real-world problems.</span>
       </p>
 
       <p class="hero__subtitle" data-reveal>
-        I design automation systems that replace manual financial workflows using Python, Selenium, and workflow orchestration tools.
+        I design automation systems that replace manual workflows using Python, Selenium, and workflow orchestration tools.
       </p>
 
       <div class="hero__actions" data-reveal>
@@ -216,7 +216,7 @@
           </div>
 
           <p class="about__mission">
-            "My goal is to eliminate manual financial operations through automation systems."
+            "My goal is to eliminate manual operations through automation systems."
           </p>
         </div>
       </div>
@@ -297,204 +297,567 @@
   <!-- ============================
        PROJECTS
   ============================= -->
-  <section class="section projects" id="projects">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow">Projects</span>
-        <h2 class="section-title">Automation Systems Built</h2>
-        <p class="section-sub">End-to-end solutions built for microfinance and financial operations environments.</p>
-      </div>
+  <!-- ============================
+     PROJECTS
+============================= -->
+<section class="section projects" id="projects">
+  <div class="container">
 
-      <div class="projects__grid">
-
-        <!-- Project 1 -->
-        <article class="project-card" data-project="1">
-          <div class="project-card__header">
-            <div class="project-card__icon" style="--icon-color: #4f8ef7;">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-                <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
-                <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
-              </svg>
-            </div>
-            <div class="project-card__number">01</div>
-          </div>
-          <h3 class="project-card__title">Microfinance Arrears Analytics Dashboard</h3>
-          <p class="project-card__desc">
-            Internal analytics dashboard providing credit risk teams with real-time visibility
-            into loan portfolio performance, arrears movement trends, and customer risk
-            segmentation — replacing a fragmented manual Excel process.
-          </p>
-          <div class="project-card__tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Streamlit</span>
-            <span class="tech-tag">Pandas</span>
-            <span class="tech-tag">Gemini AI</span>
-          </div>
-          <button class="project-card__expand-btn" aria-expanded="false" data-target="case-1">
-            View Case Study <span class="arrow">↓</span>
-          </button>
-          <div class="case-study" id="case-1" hidden>
-            <div class="case-study__block">
-              <span class="case-study__label">Problem</span>
-              <p>Branch managers were spending 2–3 hours each morning manually compiling arrears reports from multiple Excel files, with no consistent format or trend visibility.</p>
-            </div>
-            <div class="case-study__block">
-              <span class="case-study__label">Solution</span>
-              <p>Built a Streamlit dashboard that ingests branch Excel files automatically, surfaces portfolio KPIs, arrears movement charts, and officer-level breakdowns with AI-generated risk commentary.</p>
-            </div>
-            <div class="case-study__block">
-              <span class="case-study__label">Technology Used</span>
-              <p>Python, Streamlit, Pandas, openpyxl, Gemini API (gemini-2.0-flash), Plotly.</p>
-            </div>
-            <div class="case-study__block">
-              <span class="case-study__label">Business Impact</span>
-              <p>Eliminated ~2.5 hours of daily manual reporting. Risk team now receives actionable insights in under 5 minutes every morning.</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 2 -->
-        <article class="project-card" data-project="2">
-          <div class="project-card__header">
-            <div class="project-card__icon" style="--icon-color: #2ed19e;">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/>
-                <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
-              </svg>
-            </div>
-            <div class="project-card__number">02</div>
-          </div>
-          <h3 class="project-card__title">Automated Financial Reporting Engine</h3>
-          <p class="project-card__desc">
-            Python-based automation engine that ingests raw disbursement data, applies formatting
-            rules, generates styled Excel reports, produces PNG snapshots, and distributes them
-            to branch WhatsApp groups — daily, without human intervention.
-          </p>
-          <div class="project-card__tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">openpyxl</span>
-            <span class="tech-tag">Pandas</span>
-            <span class="tech-tag">n8n</span>
-            <span class="tech-tag">WhatsApp API</span>
-          </div>
-          <button class="project-card__expand-btn" aria-expanded="false" data-target="case-2">
-            View Case Study <span class="arrow">↓</span>
-          </button>
-          <div class="case-study" id="case-2" hidden>
-            <div class="case-study__block">
-              <span class="case-study__label">Problem</span>
-              <p>Daily arrears reports required manual Excel formatting and individual WhatsApp sends to 10+ branch groups — prone to errors and delays.</p>
-            </div>
-            <div class="case-study__block">
-              <span class="case-study__label">Solution</span>
-              <p>Orchestrated a multi-step Python pipeline coordinated by n8n: data ingestion → Excel formatting → PNG rendering → WhatsApp dispatch via Evolution API.</p>
-            </div>
-            <div class="case-study__block">
-              <span class="case-study__label">Technology Used</span>
-              <p>Python, openpyxl, Pillow, dataframe-image, n8n (self-hosted), Evolution API (Docker), WhatsApp Business.</p>
-            </div>
-            <div class="case-study__block">
-              <span class="case-study__label">Business Impact</span>
-              <p>Reports now distributed automatically by 8:00 AM daily. Zero manual intervention. Consistent formatting across all branches.</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 3 -->
-        <article class="project-card" data-project="3">
-          <div class="project-card__header">
-            <div class="project-card__icon" style="--icon-color: #f7a24f;">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/>
-                <line x1="12" y1="16" x2="12.01" y2="16"/>
-              </svg>
-            </div>
-            <div class="project-card__number">03</div>
-          </div>
-          <h3 class="project-card__title">Selenium Loan Booking Automation</h3>
-          <p class="project-card__desc">
-            Browser automation bot that reads a structured disbursement file and executes
-            50+ loan bookings per session in a legacy ASP.NET portal — handling postback
-            timing, ViewState management, and session refresh automatically.
-          </p>
-          <div class="project-card__tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Selenium</span>
-            <span class="tech-tag">RPA</span>
-            <span class="tech-tag">ASP.NET</span>
-          </div>
-          <button class="project-card__expand-btn" aria-expanded="false" data-target="case-3">
-            View Case Study <span class="arrow">↓</span>
-          </button>
-          <div class="case-study" id="case-3" hidden>
-            <div class="case-study__block">
-              <span class="case-study__label">Problem</span>
-              <p>Loan officers spent 3–4 hours manually booking loans into a legacy web portal. The process was error-prone, repetitive, and tied up skilled staff in data entry.</p>
-            </div>
-            <div class="case-study__block">
-              <span class="case-study__label">Solution</span>
-              <p>Built a hardened Selenium bot that processes a structured disbursement file and automates every booking step — including retry logic, stale element handling, and session refresh across 50+ loan batches.</p>
-            </div>
-            <div class="case-study__block">
-              <span class="case-study__label">Technology Used</span>
-              <p>Python 3, Selenium WebDriver, openpyxl, custom retry decorators, Chrome DevTools Protocol.</p>
-            </div>
-            <div class="case-study__block">
-              <span class="case-study__label">Business Impact</span>
-              <p>Loan booking time reduced from ~4 hours to ~25 minutes of supervised automation. Error rate near zero. Officers freed for client-facing work.</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 4 -->
-        <article class="project-card" data-project="4">
-          <div class="project-card__header">
-            <div class="project-card__icon" style="--icon-color: #d45ffc;">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
-              </svg>
-            </div>
-            <div class="project-card__number">04</div>
-          </div>
-          <h3 class="project-card__title">Bulk SMS Collections Automation</h3>
-          <p class="project-card__desc">
-            n8n-orchestrated workflow that segments at-risk customers by arrears bracket,
-            generates personalised reminder messages, and dispatches bulk SMS and WhatsApp
-            notifications — with response tracking and escalation logic.
-          </p>
-          <div class="project-card__tech">
-            <span class="tech-tag">n8n</span>
-            <span class="tech-tag">REST APIs</span>
-            <span class="tech-tag">SMS</span>
-            <span class="tech-tag">WhatsApp</span>
-            <span class="tech-tag">Python</span>
-          </div>
-          <button class="project-card__expand-btn" aria-expanded="false" data-target="case-4">
-            View Case Study <span class="arrow">↓</span>
-          </button>
-          <div class="case-study" id="case-4" hidden>
-            <div class="case-study__block">
-              <span class="case-study__label">Problem</span>
-              <p>Collections teams sent reminders manually, resulting in inconsistent messaging, missed follow-ups, and no visibility into customer response rates.</p>
-            </div>
-            <div class="case-study__block">
-              <span class="case-study__label">Solution</span>
-              <p>Designed an n8n workflow that pulls daily arrears data, segments customers by days-in-arrears, generates personalised messages, and distributes them via SMS gateway and WhatsApp API — logging all responses.</p>
-            </div>
-            <div class="case-study__block">
-              <span class="case-study__label">Technology Used</span>
-              <p>n8n (self-hosted), Africa's Talking SMS API, Evolution API, Google Sheets, Python preprocessing scripts.</p>
-            </div>
-            <div class="case-study__block">
-              <span class="case-study__label">Business Impact</span>
-              <p>Communication consistency improved dramatically. Collections team gained response-rate visibility for the first time. Manual follow-up effort reduced by ~60%.</p>
-            </div>
-          </div>
-        </article>
-
-      </div>
+    <div class="section-header">
+      <span class="section-eyebrow">Projects</span>
+      <h2 class="section-title">Automation Systems Built</h2>
+      <p class="section-sub">
+        End-to-end data, AI, and automation solutions built for financial,
+        operational, and digital business environments.
+      </p>
     </div>
-  </section>
+
+    <div class="projects__grid">
+
+      <!-- ==========================================
+           PROJECT 1 — AI MARKETING AUTOMATION
+      =========================================== -->
+      <article class="project-card" data-project="1">
+
+        <div class="project-card__header">
+          <div class="project-card__icon" style="--icon-color: #2ed19e;">
+            <svg width="28" height="28" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="1.8"
+              aria-hidden="true">
+
+              <path d="M12 3v3"/>
+              <path d="M12 18v3"/>
+              <path d="M3 12h3"/>
+              <path d="M18 12h3"/>
+              <path d="M5.64 5.64l2.12 2.12"/>
+              <path d="M16.24 16.24l2.12 2.12"/>
+              <path d="M18.36 5.64l-2.12 2.12"/>
+              <path d="M7.76 16.24l-2.12 2.12"/>
+              <circle cx="12" cy="12" r="4"/>
+
+            </svg>
+          </div>
+
+          <div class="project-card__number">01</div>
+        </div>
+
+        <h3 class="project-card__title">
+          AI-Powered Marketing &amp; Social Media Automation Platform
+        </h3>
+
+        <p class="project-card__desc">
+          End-to-end AI-powered marketing automation platform combining campaign
+          planning, AI-generated content, branded poster creation, workflow
+          orchestration, and multi-channel content distribution to streamline
+          digital marketing operations.
+        </p>
+
+        <div class="project-card__tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Generative AI</span>
+          <span class="tech-tag">n8n</span>
+          <span class="tech-tag">API Integration</span>
+          <span class="tech-tag">Puppeteer</span>
+          <span class="tech-tag">WhatsApp Automation</span>
+        </div>
+
+        <button
+          class="project-card__expand-btn"
+          aria-expanded="false"
+          data-target="case-1">
+
+          View Case Study
+          <span class="arrow">↓</span>
+
+        </button>
+
+        <div class="case-study" id="case-1" hidden>
+
+          <div class="case-study__block">
+            <span class="case-study__label">Problem</span>
+            <p>
+              Marketing teams often rely on fragmented manual processes to plan
+              campaigns, write content, design promotional materials, and
+              distribute posts across multiple communication channels. This
+              creates repetitive work, inconsistent brand execution, and limits
+              the ability to scale content production.
+            </p>
+          </div>
+
+          <div class="case-study__block">
+            <span class="case-study__label">Solution</span>
+            <p>
+              Designed and developed an AI-powered marketing automation platform
+              connecting structured campaign data with AI content generation,
+              automated visual production, brand-aware poster rendering, and
+              workflow-based content distribution.
+            </p>
+          </div>
+
+          <div class="case-study__block">
+            <span class="case-study__label">Automation Workflow</span>
+            <p>
+              Campaign planning → Content calendar → AI content generation →
+              AI-assisted image generation → Branded poster rendering →
+              Content processing → Multi-channel distribution →
+              Campaign status tracking.
+            </p>
+          </div>
+
+          <div class="case-study__block">
+            <span class="case-study__label">Technology Used</span>
+            <p>
+              Python, Generative AI, n8n, API integrations, Puppeteer,
+              HTML/CSS, structured campaign data, automated image generation,
+              WhatsApp automation, and workflow orchestration.
+            </p>
+          </div>
+
+          <div class="case-study__block">
+            <span class="case-study__label">Key Capabilities</span>
+            <p>
+              AI-generated campaign copy and captions, automated branded poster
+              generation, structured content calendar management, AI-powered
+              visual content creation, workflow orchestration, API-based
+              integrations, automated communication workflows, and
+              multi-channel content distribution.
+            </p>
+          </div>
+
+          <div class="case-study__block">
+            <span class="case-study__label">Business Impact</span>
+            <p>
+              Transformed repetitive marketing tasks into a structured,
+              automation-driven workflow, reducing manual effort in campaign
+              preparation and enabling faster, more consistent production and
+              distribution of branded marketing content.
+            </p>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- ==========================================
+           PROJECT 2 — MICROFINANCE ARREARS DASHBOARD
+      =========================================== -->
+      <article class="project-card" data-project="2">
+
+        <div class="project-card__header">
+
+          <div class="project-card__icon" style="--icon-color: #4f8ef7;">
+
+            <svg width="28" height="28" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="1.8"
+              aria-hidden="true">
+
+              <rect x="3" y="3" width="7" height="7"/>
+              <rect x="14" y="3" width="7" height="7"/>
+              <rect x="14" y="14" width="7" height="7"/>
+              <rect x="3" y="14" width="7" height="7"/>
+
+            </svg>
+
+          </div>
+
+          <div class="project-card__number">02</div>
+
+        </div>
+
+        <h3 class="project-card__title">
+          Microfinance Arrears Analytics Dashboard
+        </h3>
+
+        <p class="project-card__desc">
+          Internal analytics dashboard providing credit risk teams with
+          visibility into loan portfolio performance, arrears movement trends,
+          and customer risk segmentation — replacing a fragmented manual
+          Excel process.
+        </p>
+
+        <div class="project-card__tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Streamlit</span>
+          <span class="tech-tag">Pandas</span>
+          <span class="tech-tag">Gemini AI</span>
+        </div>
+
+        <button
+          class="project-card__expand-btn"
+          aria-expanded="false"
+          data-target="case-2">
+
+          View Case Study
+          <span class="arrow">↓</span>
+
+        </button>
+
+        <div class="case-study" id="case-2" hidden>
+
+          <div class="case-study__block">
+            <span class="case-study__label">Problem</span>
+            <p>
+              Branch managers were spending 2–3 hours each morning manually
+              compiling arrears reports from multiple Excel files, with no
+              consistent format or trend visibility.
+            </p>
+          </div>
+
+          <div class="case-study__block">
+            <span class="case-study__label">Solution</span>
+            <p>
+              Built a Streamlit dashboard that processes branch Excel data,
+              surfaces portfolio KPIs, arrears movement trends, and officer-level
+              breakdowns, with AI-assisted analytical commentary.
+            </p>
+          </div>
+
+          <div class="case-study__block">
+            <span class="case-study__label">Technology Used</span>
+            <p>
+              Python, Streamlit, Pandas, openpyxl, Gemini API,
+              and Plotly.
+            </p>
+          </div>
+
+          <div class="case-study__block">
+            <span class="case-study__label">Business Impact</span>
+            <p>
+              Reduced manual reporting effort and improved the speed and
+              consistency of portfolio monitoring, enabling risk teams to
+              access actionable insights significantly faster.
+            </p>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- ==========================================
+           PROJECT 3 — FINANCIAL REPORTING ENGINE
+      =========================================== -->
+      <article class="project-card" data-project="3">
+
+        <div class="project-card__header">
+
+          <div class="project-card__icon" style="--icon-color: #2ed19e;">
+
+            <svg width="28" height="28" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="1.8"
+              aria-hidden="true">
+
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+
+            </svg>
+
+          </div>
+
+          <div class="project-card__number">03</div>
+
+        </div>
+
+        <h3 class="project-card__title">
+          Automated Financial Reporting Engine
+        </h3>
+
+        <p class="project-card__desc">
+          Python-based automation engine that ingests raw financial data,
+          applies formatting and processing rules, generates structured Excel
+          reports and visual snapshots, and distributes reports to branch
+          communication channels.
+        </p>
+
+        <div class="project-card__tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">openpyxl</span>
+          <span class="tech-tag">Pandas</span>
+          <span class="tech-tag">n8n</span>
+          <span class="tech-tag">WhatsApp API</span>
+        </div>
+
+        <button
+          class="project-card__expand-btn"
+          aria-expanded="false"
+          data-target="case-3">
+
+          View Case Study
+          <span class="arrow">↓</span>
+
+        </button>
+
+        <div class="case-study" id="case-3" hidden>
+
+          <div class="case-study__block">
+            <span class="case-study__label">Problem</span>
+            <p>
+              Daily financial and arrears reports required repetitive Excel
+              formatting, manual preparation of visual summaries, and individual
+              distribution to multiple branch communication groups.
+            </p>
+          </div>
+
+          <div class="case-study__block">
+            <span class="case-study__label">Solution</span>
+            <p>
+              Orchestrated a multi-step Python pipeline coordinated by n8n:
+              data ingestion → validation and processing → Excel formatting →
+              visual output generation → automated report distribution.
+            </p>
+          </div>
+
+          <div class="case-study__block">
+            <span class="case-study__label">Technology Used</span>
+            <p>
+              Python, Pandas, openpyxl, Pillow, dataframe-image,
+              n8n, Docker, and WhatsApp integration.
+            </p>
+          </div>
+
+          <div class="case-study__block">
+            <span class="case-study__label">Business Impact</span>
+            <p>
+              Reduced repetitive reporting work, improved consistency across
+              branch reports, and enabled scheduled delivery of operational
+              reports with minimal manual intervention.
+            </p>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- ==========================================
+           PROJECT 4 — SELENIUM LOAN BOOKING
+      =========================================== -->
+      <article class="project-card" data-project="4">
+
+        <div class="project-card__header">
+
+          <div class="project-card__icon" style="--icon-color: #f7a24f;">
+
+            <svg width="28" height="28" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="1.8"
+              aria-hidden="true">
+
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+
+            </svg>
+
+          </div>
+
+          <div class="project-card__number">04</div>
+
+        </div>
+
+        <h3 class="project-card__title">
+          Selenium Loan Booking Automation
+        </h3>
+
+        <p class="project-card__desc">
+          Browser automation bot that reads structured disbursement data and
+          executes repetitive loan booking workflows in a legacy ASP.NET
+          portal, handling postback timing, session management, retries,
+          and exception recovery.
+        </p>
+
+        <div class="project-card__tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Selenium</span>
+          <span class="tech-tag">RPA</span>
+          <span class="tech-tag">ASP.NET</span>
+        </div>
+
+        <button
+          class="project-card__expand-btn"
+          aria-expanded="false"
+          data-target="case-4">
+
+          View Case Study
+          <span class="arrow">↓</span>
+
+        </button>
+
+        <div class="case-study" id="case-4" hidden>
+
+          <div class="case-study__block">
+            <span class="case-study__label">Problem</span>
+            <p>
+              Loan officers spent several hours manually entering and booking
+              loans into a legacy web portal. The process was repetitive,
+              time-consuming, and vulnerable to data-entry errors.
+            </p>
+          </div>
+
+          <div class="case-study__block">
+            <span class="case-study__label">Solution</span>
+            <p>
+              Built a Selenium-based RPA workflow that processes structured
+              disbursement data and automates repetitive booking steps with
+              retry logic, stale-element handling, and session management.
+            </p>
+          </div>
+
+          <div class="case-study__block">
+            <span class="case-study__label">Technology Used</span>
+            <p>
+              Python, Selenium WebDriver, openpyxl, browser automation,
+              and custom retry logic.
+            </p>
+          </div>
+
+          <div class="case-study__block">
+            <span class="case-study__label">Business Impact</span>
+            <p>
+              Reduced repetitive manual data-entry work and accelerated the
+              loan booking process while improving process consistency.
+            </p>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- ==========================================
+           PROJECT 5 — BULK SMS COLLECTIONS
+      =========================================== -->
+      <!-- ==========================================
+     PROJECT 5 — LOAN LIFECYCLE COMMUNICATION
+=========================================== -->
+<article class="project-card" data-project="5">
+
+  <div class="project-card__header">
+
+    <div class="project-card__icon" style="--icon-color: #d45ffc;">
+
+      <svg width="28" height="28" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="1.8"
+        aria-hidden="true">
+
+        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+        <path d="M8 9h8"/>
+        <path d="M8 13h5"/>
+
+      </svg>
+
+    </div>
+
+    <div class="project-card__number">05</div>
+
+  </div>
+
+  <h3 class="project-card__title">
+    Loan Lifecycle Communication &amp; Customer Notification Automation
+  </h3>
+
+  <p class="project-card__desc">
+    Automated customer communication platform that manages time-sensitive
+    notifications across the loan lifecycle — from disbursement confirmations
+    and upcoming repayment reminders to due-date alerts and arrears
+    collection messages.
+  </p>
+
+  <div class="project-card__tech">
+    <span class="tech-tag">Python</span>
+    <span class="tech-tag">n8n</span>
+    <span class="tech-tag">REST APIs</span>
+    <span class="tech-tag">SMS</span>
+    <span class="tech-tag">WhatsApp</span>
+    <span class="tech-tag">Data Segmentation</span>
+  </div>
+
+  <button
+    class="project-card__expand-btn"
+    aria-expanded="false"
+    data-target="case-5">
+
+    View Case Study
+    <span class="arrow">↓</span>
+
+  </button>
+
+  <div class="case-study" id="case-5" hidden>
+
+    <div class="case-study__block">
+      <span class="case-study__label">Problem</span>
+      <p>
+        Customer communication across the loan lifecycle required repetitive
+        manual preparation and sending. This made it difficult to consistently
+        deliver timely notifications for newly disbursed loans, upcoming
+        repayment obligations, scheduled due dates, and overdue accounts.
+      </p>
+    </div>
+
+    <div class="case-study__block">
+      <span class="case-study__label">Solution</span>
+      <p>
+        Designed and expanded an automated communication workflow that
+        processes loan and repayment data, identifies customers based on
+        relevant loan lifecycle events, prepares appropriate messages, and
+        automatically dispatches notifications through SMS and WhatsApp
+        communication channels.
+      </p>
+    </div>
+
+    <div class="case-study__block">
+      <span class="case-study__label">Communication Workflows</span>
+      <p>
+        Loan disbursement notifications → Upcoming repayment reminders →
+        Repayment due-date notifications → Arrears reminders →
+        Collection communication.
+      </p>
+    </div>
+
+    <div class="case-study__block">
+      <span class="case-study__label">Automation Workflow</span>
+      <p>
+        Loan and customer data processing → Data validation and segmentation →
+        Loan lifecycle event detection → Message selection and personalisation →
+        Automated SMS/WhatsApp dispatch → Delivery and workflow tracking.
+      </p>
+    </div>
+
+    <div class="case-study__block">
+      <span class="case-study__label">Technology Used</span>
+      <p>
+        Python, n8n, REST APIs, SMS gateways, WhatsApp integrations,
+        structured financial datasets, data processing scripts, and
+        automated workflow orchestration.
+      </p>
+    </div>
+
+    <div class="case-study__block">
+      <span class="case-study__label">Key Capabilities</span>
+      <p>
+        Automated disbursement notifications, upcoming repayment reminders,
+        repayment due-date alerts, arrears communication, customer
+        segmentation, personalised messaging, multi-channel communication,
+        and scheduled workflow execution.
+      </p>
+    </div>
+
+    <div class="case-study__block">
+      <span class="case-study__label">Business Impact</span>
+      <p>
+        Expanded customer communication from a primarily collections-focused
+        process into a broader automated loan lifecycle communication system,
+        enabling more timely and consistent engagement with customers while
+        reducing repetitive manual communication work.
+      </p>
+    </div>
+
+  </div>
+
+</article>
 
   <!-- ============================
        SKILLS
