@@ -3347,3 +3347,247 @@ h4 {
   }
 
 }
+/* ===============================
+   PROJECT SHOWCASE
+==================================*/
+
+.showcase-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+gap:2rem;
+
+}
+
+.showcase-card{
+
+background:var(--c-bg-2);
+
+border:1px solid var(--c-border);
+
+border-radius:18px;
+
+overflow:hidden;
+
+transition:.35s;
+
+}
+
+.showcase-card:hover{
+
+transform:translateY(-8px);
+
+border-color:var(--c-accent);
+
+box-shadow:0 15px 40px rgba(0,0,0,.45);
+
+}
+
+.showcase-media{
+
+aspect-ratio:16/9;
+
+overflow:hidden;
+
+background:#111;
+
+}
+
+.showcase-media img,
+
+.showcase-media video{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+.showcase-content{
+
+padding:1.5rem;
+
+}
+
+.showcase-tag{
+
+display:inline-block;
+
+padding:6px 12px;
+
+border-radius:999px;
+
+background:rgba(0,245,212,.08);
+
+color:var(--c-accent);
+
+font-size:.75rem;
+
+margin-bottom:12px;
+
+}
+
+.showcase-content h3{
+
+margin-bottom:10px;
+
+}
+
+.showcase-content p{
+
+font-size:.95rem;
+
+line-height:1.7;
+
+}
+/* ============================
+SHOWCASE AUTO SCROLLER
+============================ */
+
+
+.showcase-wrapper{
+
+overflow:hidden;
+
+width:100%;
+
+}
+
+
+
+.showcase-track{
+
+display:flex;
+
+gap:25px;
+
+width:max-content;
+
+animation:scrollMedia 35s linear infinite;
+
+}
+
+
+
+.showcase-wrapper:hover 
+.showcase-track{
+
+animation-play-state:paused;
+
+}
+
+
+
+.showcase-card{
+
+width:380px;
+
+flex-shrink:0;
+
+background:var(--c-bg-2);
+
+border-radius:18px;
+
+overflow:hidden;
+
+border:1px solid var(--c-border);
+
+}
+
+
+
+.showcase-card img,
+.showcase-card video{
+
+width:100%;
+
+height:230px;
+
+object-fit:cover;
+
+cursor:pointer;
+
+display:block;
+
+}
+
+
+
+.showcase-card h3{
+
+padding:18px;
+
+margin:0;
+
+}
+
+
+
+
+@keyframes scrollMedia{
+
+
+from{
+
+transform:translateX(0);
+
+}
+
+
+to{
+
+transform:translateX(-50%);
+
+}
+
+
+}
+
+
+
+/* ============================
+IMAGE FULLSCREEN VIEW
+============================ */
+
+
+.media-modal{
+
+display:none;
+
+position:fixed;
+
+z-index:9999;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.9);
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+
+
+.media-modal img{
+
+max-width:90%;
+
+max-height:90%;
+
+border-radius:15px;
+
+}

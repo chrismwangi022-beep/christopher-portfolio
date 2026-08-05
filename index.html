@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Christopher Mwangi – Data, AI & Automation Engineer specialising in Python automation, Selenium RPA, n8n workflows, and microfinance data systems." />
   <title>Christopher Mwangi · Data, AI & Automation Engineer</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=2" />
   <!-- Google Fonts: Space Grotesk (display) + Inter (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,6 +25,7 @@
       <ul class="nav__links" id="navLinks" role="list">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#showcase">Showcase</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -106,6 +107,184 @@
       </div>
     </div>
   </section>
+
+<!-- ==========================================
+     PROJECT SHOWCASE CAROUSEL
+=========================================== -->
+
+<section class="section showcase" id="showcase">
+
+<div class="container">
+
+<div class="section-header">
+
+<span class="section-eyebrow">
+Project Showcase
+</span>
+
+<h2 class="section-title">
+Systems In Action
+</h2>
+
+<p class="section-sub">
+A visual walkthrough of AI automation systems, dashboards and software solutions.
+</p>
+
+</div>
+
+
+<div class="showcase-wrapper">
+
+
+<div class="showcase-track">
+
+
+<!-- CARD 1 -->
+<div class="showcase-card">
+
+<img 
+src="assets/media/showcase/dashboard.png"
+onclick="openMedia(this.src)"
+alt="Dashboard">
+
+<h3>
+AI Arrears Dashboard
+</h3>
+
+</div>
+
+
+
+<!-- CARD 2 -->
+<div class="showcase-card">
+
+<video controls>
+
+<source 
+src="assets/media/showcase/dashboard demo.mp4"
+type="video/mp4">
+
+</video>
+
+<h3>
+Dashboard Demo
+</h3>
+
+</div>
+
+
+
+
+<!-- CARD 3 -->
+
+<div class="showcase-card">
+
+<img
+src="assets/media/showcase/Bulk SMS workflow.png"
+onclick="openMedia(this.src)"
+alt="Bulk SMS Workflow">
+
+<h3>
+Bulk SMS Automation
+</h3>
+
+</div>
+
+
+
+<!-- CARD 4 -->
+
+<div class="showcase-card">
+
+<img
+src="assets/media/showcase/Bulk SMS workflow 2.png"
+onclick="openMedia(this.src)"
+alt="Bulk SMS Workflow">
+
+<h3>
+Bulk SMS Workflow V2
+</h3>
+
+</div>
+
+
+
+<!-- CARD 5 -->
+
+<div class="showcase-card">
+
+<img
+src="assets/media/showcase/creative engine content 1.png"
+onclick="openMedia(this.src)"
+alt="Creative Engine">
+
+<h3>
+AI Creative Engine
+</h3>
+
+</div>
+
+
+
+<!-- CARD 6 -->
+
+<div class="showcase-card">
+
+<img
+src="assets/media/showcase/creative engine content 2.png"
+onclick="openMedia(this.src)"
+alt="Creative Engine">
+
+<h3>
+AI Content Generation
+</h3>
+
+</div>
+
+
+
+<!-- CARD 7 -->
+
+<div class="showcase-card">
+
+
+<video controls>
+
+<source
+src="assets/media/showcase/selenium loans booking demo.mp4"
+type="video/mp4">
+
+</video>
+
+
+<h3>
+Loan Booking Automation
+</h3>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<!-- IMAGE LIGHTBOX -->
+
+<div id="mediaModal"
+class="media-modal"
+onclick="closeMedia()">
+
+<img id="modalImage">
+
+</div>
 
   <!-- ============================
        IMPACT METRICS STRIP
@@ -1119,5 +1298,31 @@
   </div>
 
   <script src="script.js"></script>
+  <script>
+
+
+function openMedia(src){
+
+const modal=document.getElementById("mediaModal");
+
+const image=document.getElementById("modalImage");
+
+
+image.src=src;
+
+modal.style.display="flex";
+
+}
+
+
+
+function closeMedia(){
+
+document.getElementById("mediaModal").style.display="none";
+
+}
+
+
+</script>
 </body>
 </html>
