@@ -3618,3 +3618,13 @@ border-radius:15px;
 }
 
 }
+.section,
+.project-card,
+.skill-group,
+.timeline__item,
+.impact-card,
+.architecture-stage,
+.section-header {
+    opacity:1 !important;
+    transform:none !important;
+}
