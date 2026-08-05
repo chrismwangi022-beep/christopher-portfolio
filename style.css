@@ -3591,3 +3591,30 @@ max-height:90%;
 border-radius:15px;
 
 }
+/* Mobile section rendering fix */
+
+@media(max-width:768px){
+
+.showcase{
+    height:auto;
+    overflow:visible;
+}
+
+.showcase-wrapper{
+    height:auto;
+    min-height:320px;
+}
+
+.showcase-track{
+    position:relative;
+}
+
+.projects,
+.skills,
+.experience,
+.contact{
+    position:relative;
+    z-index:5;
+}
+
+}
