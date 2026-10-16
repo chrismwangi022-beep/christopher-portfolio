@@ -812,6 +812,48 @@ onclick="closeMedia()">
               adoption are not presented as verified outcomes.
             </p>
           </div>
+          <div class="case-study__block">
+            <span class="case-study__label">Evidence &amp; Demonstration</span>
+            <p>
+              Explore the deployed dashboard or navigate through both
+              recorded demonstrations below.
+            </p>
+            <p>
+              <a href="https://christopher-arrears-analysis-spread-capital.streamlit.app/"
+                 target="_blank" rel="noopener noreferrer"
+                 style="display:inline-block;padding:12px 18px;border-radius:8px;background:#087f8c;color:#fff;text-decoration:none;font-weight:700;">
+                Click to View Live Dashboard ↗
+              </a>
+            </p>
+            <div class="evidence-gallery" data-evidence-gallery="arrears">
+              <div class="evidence-gallery__header">
+                <strong>Arrears Dashboard Demonstrations</strong>
+                <span class="evidence-gallery__count" aria-live="polite">1 of 3</span>
+              </div>
+              <div class="evidence-gallery__slides">
+                <div class="evidence-slide">
+                  <p><strong>Compressed dashboard demo</strong></p>
+                  <video controls preload="metadata" playsinline style="display:block;width:100%;max-width:900px;border-radius:12px;">
+                    <source src="assets/media/showcase/web/arrears-dashboard-demo.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+                  <p><a href="assets/media/showcase/web/arrears-dashboard-demo.mp4" download>Open or download compressed demo</a></p>
+                </div>
+                <div class="evidence-slide" hidden>
+                  <p><strong>Raw data upload walkthrough</strong></p>
+                  <video controls preload="none" playsinline style="display:block;width:100%;max-width:900px;border-radius:12px;">
+                    <source src="assets/media/showcase/arrears-dashboard/Raw%20data%20upload.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+                  <p><a href="assets/media/showcase/arrears-dashboard/Raw%20data%20upload.mp4" target="_blank" rel="noopener noreferrer">Open original recording</a></p>
+                </div>
+              </div>
+              <div class="evidence-gallery__controls" style="display:flex;gap:10px;align-items:center;margin-top:14px;">
+                <button type="button" data-gallery-prev disabled>← Previous</button>
+                <button type="button" data-gallery-next>Next →</button>
+              </div>
+            </div>
+            </div>
 
         </div>
 
@@ -1008,6 +1050,45 @@ onclick="closeMedia()">
               totals.
             </p>
           </div>
+          <div class="case-study__block">
+            <span class="case-study__label">Evidence &amp; Demonstration</span>
+            <p>
+              Review the loan-booking demonstrations, screenshot evidence,
+              and execution log using the gallery controls.
+            </p>
+            <div class="evidence-gallery" data-evidence-gallery="selenium">
+              <div class="evidence-gallery__header">
+                <strong>Selenium Loan Booking Evidence</strong>
+                <span class="evidence-gallery__count" aria-live="polite">1 of 4</span>
+              </div>
+              <div class="evidence-gallery__slides">
+                <div class="evidence-slide">
+                  <p><strong>Compressed loan-booking demonstration</strong></p>
+                  <video controls preload="metadata" playsinline style="display:block;width:100%;max-width:900px;border-radius:12px;">
+                    <source src="assets/media/showcase/web/selenium-loan-booking-demo.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+                  <p><a href="assets/media/showcase/web/selenium-loan-booking-demo.mp4" download>Open or download compressed demo</a></p>
+                </div>
+                <div class="evidence-slide" hidden>
+                  <p><strong>Booked loans screenshot</strong></p>
+                  <a href="assets/media/showcase/selenium-loan-booking/Booked%20loans.png" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/media/showcase/selenium-loan-booking/Booked%20loans.png" alt="Screenshot evidence from the loan-booking automation run" loading="lazy" style="display:block;width:100%;max-width:900px;height:auto;border-radius:12px;">
+                  </a>
+                  <p><a href="assets/media/showcase/selenium-loan-booking/Booked%20loans.png" download>Open or download screenshot</a></p>
+                </div>
+                <div class="evidence-slide" hidden>
+                  <p><strong>Excel execution log</strong></p>
+                  <p>The execution log is provided as a downloadable workbook.</p>
+                  <p><a href="assets/media/showcase/selenium-loan-booking/Selenium%20Loans%20booking%20Execution_Log_20261016_091629.xlsx" download>Download Selenium execution log (.xlsx)</a></p>
+                </div>
+              </div>
+              <div class="evidence-gallery__controls" style="display:flex;gap:10px;align-items:center;margin-top:14px;">
+                <button type="button" data-gallery-prev disabled>← Previous</button>
+                <button type="button" data-gallery-next>Next →</button>
+              </div>
+            </div>
+            </div>
 
         </div>
 
@@ -1403,6 +1484,51 @@ document.getElementById("mediaModal").style.display="none";
 }
 
 
+</script>
+<script>
+document.querySelectorAll("[data-evidence-gallery]").forEach(function (gallery) {
+  const slides = Array.from(gallery.querySelectorAll(".evidence-slide"));
+  const count = gallery.querySelector(".evidence-gallery__count");
+  const previous = gallery.querySelector("[data-gallery-prev]");
+  const next = gallery.querySelector("[data-gallery-next]");
+  let current = 0;
+
+  function showSlide(index) {
+    slides[current].querySelectorAll("video").forEach(function (video) {
+      video.pause();
+    });
+
+    current = index;
+
+    slides.forEach(function (slide, i) {
+      slide.hidden = i !== current;
+    });
+
+    const activeSlide = slides[current];
+
+    activeSlide.querySelectorAll("video").forEach(function (video) {
+      video.load();
+    });
+
+    activeSlide.querySelectorAll("img").forEach(function (img) {
+      img.loading = "eager";
+    });
+
+    count.textContent = (current + 1) + " of " + slides.length;
+    previous.disabled = current === 0;
+    next.disabled = current === slides.length - 1;
+  }
+
+  previous.addEventListener("click", function () {
+    if (current > 0) showSlide(current - 1);
+  });
+
+  next.addEventListener("click", function () {
+    if (current < slides.length - 1) showSlide(current + 1);
+  });
+
+  showSlide(0);
+});
 </script>
 </body>
 </html>
