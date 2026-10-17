@@ -277,13 +277,24 @@ Loan Booking Automation
 
 
 <!-- IMAGE LIGHTBOX -->
-
-<div id="mediaModal"
-class="media-modal"
-onclick="closeMedia()">
-
-<img id="modalImage">
-
+<div id="mediaModal" class="media-modal"
+     role="dialog" aria-modal="true" aria-labelledby="modalCaption"
+     aria-hidden="true" onclick="closeMedia()">
+  <div class="media-modal__dialog" onclick="event.stopPropagation()">
+    <div class="media-modal__header">
+      <strong id="modalCaption">Campaign poster</strong>
+      <button type="button" class="media-modal__close"
+              onclick="closeMedia()" aria-label="Close poster viewer">Close ×</button>
+    </div>
+    <div class="media-modal__image-scroll">
+      <img id="modalImage" alt="Enlarged campaign poster">
+    </div>
+    <div class="media-modal__controls">
+      <button type="button" id="modalPrev">← Previous</button>
+      <span id="modalCounter" aria-live="polite">1 of 3</span>
+      <button type="button" id="modalNext">Next →</button>
+    </div>
+  </div>
 </div>
 
   <!-- ============================
@@ -613,111 +624,178 @@ onclick="closeMedia()">
       =========================================== -->
       <article class="project-card" data-project="2">
 
-        <div class="project-card__header">
-          <div class="project-card__icon" style="--icon-color: #2ed19e;">
-            <svg width="28" height="28" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="1.8"
-              aria-hidden="true">
+  <div class="project-card__header">
+    <div class="project-card__icon" style="--icon-color: #2ed19e;">
+      <svg width="28" height="28" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="1.8"
+        aria-hidden="true">
+        <path d="M12 3v3"/>
+        <path d="M12 18v3"/>
+        <path d="M3 12h3"/>
+        <path d="M18 12h3"/>
+        <path d="M5.64 5.64l2.12 2.12"/>
+        <path d="M16.24 16.24l2.12 2.12"/>
+        <path d="M18.36 5.64l-2.12 2.12"/>
+        <path d="M7.76 16.24l-2.12 2.12"/>
+        <circle cx="12" cy="12" r="4"/>
+      </svg>
+    </div>
+    <div class="project-card__number">02</div>
+  </div>
 
-              <path d="M12 3v3"/>
-              <path d="M12 18v3"/>
-              <path d="M3 12h3"/>
-              <path d="M18 12h3"/>
-              <path d="M5.64 5.64l2.12 2.12"/>
-              <path d="M16.24 16.24l2.12 2.12"/>
-              <path d="M18.36 5.64l-2.12 2.12"/>
-              <path d="M7.76 16.24l-2.12 2.12"/>
-              <circle cx="12" cy="12" r="4"/>
+  <h3 class="project-card__title">
+    AI-Assisted Marketing Workflow &amp; Campaign Asset Automation
+  </h3>
 
-            </svg>
-          </div>
+  <p class="project-card__desc">
+    A marketing-operations prototype connecting structured campaign planning
+    in Google Sheets with n8n workflow design and poster-rendering steps.
+    The portfolio includes workflow screenshots and sample creative assets;
+    these demonstrate the design and outputs, not independently verified
+    end-to-end execution.
+  </p>
 
-          <div class="project-card__number">02</div>
+  <div class="project-card__tech">
+    <span class="tech-tag">n8n</span>
+    <span class="tech-tag">Workflow Automation</span>
+    <span class="tech-tag">Google Sheets</span>
+    <span class="tech-tag">API Integration</span>
+    <span class="tech-tag">Campaign Assets</span>
+  </div>
+
+  <button
+    class="project-card__expand-btn"
+    aria-expanded="false"
+    data-target="case-2">
+    View Case Study
+    <span class="arrow">↓</span>
+  </button>
+
+  <div class="case-study" id="case-2" hidden>
+
+    <div class="case-study__block">
+      <span class="case-study__label">Objective</span>
+      <p>
+        Explore how campaign information can be organised centrally and
+        passed through a repeatable workflow for preparing marketing assets,
+        rather than treating planning, creative preparation and rendering
+        as unrelated tasks.
+      </p>
+    </div>
+
+    <div class="case-study__block">
+      <span class="case-study__label">Campaign Content Calendar</span>
+      <p>
+        Google Sheets serves as the campaign-planning reference for this
+        workflow. Open the calendar to inspect the source planning document.
+        Access depends on the spreadsheet's sharing permissions.
+      </p>
+      <p>
+        <a href="https://docs.google.com/spreadsheets/d/15RG5k0Y1pcaB4p7UCGVnIBMZHau35dC3UECD1qKupFQ/edit?gid=1084972381#gid=1084972381"
+           target="_blank" rel="noopener noreferrer">
+          Open the Marketing Content Calendar ↗
+        </a>
+      </p>
+    </div>
+
+    <div class="case-study__block">
+      <span class="case-study__label">Approach</span>
+      <p>
+        The available n8n screenshots show a workflow connecting a manual
+        trigger, Google Sheets row retrieval, a conditional step and a
+        campaign-builder launch. A second workflow diagram shows campaign
+        payload preparation, looping over items and an HTTP request to a
+        poster-rendering API.
+      </p>
+      <p>
+        These screenshots document the visible workflow structure. They do
+        not, by themselves, establish that every step completed successfully.
+      </p>
+    </div>
+
+    <div class="case-study__block">
+      <span class="case-study__label">Evidence &amp; Demonstration</span>
+      <p>
+        Browse the workflow screenshots and sample poster assets below.
+        Use the arrows to move between items. The images are presented as
+        design and workflow evidence, not proof that each poster was
+        automatically generated by the pictured pipeline.
+      </p>
+
+      <div class="evidence-gallery" data-evidence-gallery="marketing">
+        <div class="evidence-gallery__header">
+          <strong>Marketing Workflow &amp; Creative Evidence</strong>
+          <span class="evidence-gallery__count" aria-live="polite">1 of 3</span>
         </div>
 
-        <h3 class="project-card__title">
-          AI-Powered Marketing &amp; Social Media Automation Platform
-        </h3>
+        <div class="evidence-gallery__slides">
 
-        <p class="project-card__desc">
-          Applied workflow that connects campaign planning, AI-generated copy
-          and visuals, branded poster rendering and multi-channel distribution
-          so repetitive marketing preparation is handled as a structured
-          process rather than disconnected manual tasks.
-        </p>
+          <div class="evidence-slide">
+  <p><strong>01 — Creative Engine: Idle Workflow</strong></p>
+  <p>The workflow configuration before a run. This documents the designed workflow structure.</p>
+  <a href="assets/media/showcase/ai-marketing-automation-assets/03-ai-content-and-creative/workflow-n8n-02-creative-engine-sheet-to-campaign-builder-idle.png" target="_blank" rel="noopener noreferrer">
+    <img src="assets/media/showcase/ai-marketing-automation-assets/03-ai-content-and-creative/workflow-n8n-02-creative-engine-sheet-to-campaign-builder-idle.png" alt="Creative engine idle workflow" loading="lazy" style="display:block;width:100%;height:auto;border-radius:12px;">
+  </a>
+  <p><a href="assets/media/showcase/ai-marketing-automation-assets/03-ai-content-and-creative/workflow-n8n-02-creative-engine-sheet-to-campaign-builder-idle.png" target="_blank" rel="noopener noreferrer">Open full-size screenshot ↗</a></p>
+</div>
 
-        <div class="project-card__tech">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">Generative AI</span>
-          <span class="tech-tag">n8n</span>
-          <span class="tech-tag">API Integration</span>
-          <span class="tech-tag">Puppeteer</span>
-          <span class="tech-tag">WhatsApp Automation</span>
-        </div>
+<div class="evidence-slide" hidden>
+  <p><strong>02 — Creative Engine: Running Workflow</strong></p>
+  <p>The workflow screenshot showing its running state and visible processing steps.</p>
+  <a href="assets/media/showcase/ai-marketing-automation-assets/03-ai-content-and-creative/workflow-n8n-02-creative-engine-sheet-to-campaign-builder-running.png" target="_blank" rel="noopener noreferrer">
+    <img src="assets/media/showcase/ai-marketing-automation-assets/03-ai-content-and-creative/workflow-n8n-02-creative-engine-sheet-to-campaign-builder-running.png" alt="Creative engine running workflow" loading="lazy" style="display:block;width:100%;height:auto;border-radius:12px;">
+  </a>
+  <p><a href="assets/media/showcase/ai-marketing-automation-assets/03-ai-content-and-creative/workflow-n8n-02-creative-engine-sheet-to-campaign-builder-running.png" target="_blank" rel="noopener noreferrer">Open full-size screenshot ↗</a></p>
+</div>
 
-        <button
-          class="project-card__expand-btn"
-          aria-expanded="false"
-          data-target="case-2">
-
-          View Case Study
-          <span class="arrow">↓</span>
-
-        </button>
-
-        <div class="case-study" id="case-2" hidden>
-
-          <div class="case-study__block">
-            <span class="case-study__label">Problem</span>
-            <p>
-              Campaign planning, copywriting, poster design and channel
-              distribution were handled as separate manual steps. That made
-              content production slow to repeat and easy to execute
-              inconsistently across channels.
-            </p>
-          </div>
-
-          <div class="case-study__block">
-            <span class="case-study__label">Context</span>
-            <p>
-              Built as a practical marketing-operations workflow, not as a
-              claimed enterprise product rollout. It shows how structured
-              campaign data can drive AI-assisted content and distribution.
-            </p>
-          </div>
-
-          <div class="case-study__block">
-            <span class="case-study__label">Approach</span>
-            <p>
-              Connected structured campaign inputs to generative AI for copy
-              and images, branded poster rendering, n8n orchestration,
-              Puppeteer/API integrations and WhatsApp distribution, with
-              campaign status tracking in the workflow.
-            </p>
-          </div>
-
-          <div class="case-study__block">
-            <span class="case-study__label">Workflow</span>
-            <p>
-              Campaign planning → content calendar → AI content generation →
-              AI-assisted image generation → branded poster rendering →
-              content processing → multi-channel distribution →
-              campaign status tracking.
-            </p>
-          </div>
-
-          <div class="case-study__block">
-            <span class="case-study__label">Result</span>
-            <p>
-              A working automation path from campaign data to generated assets
-              and outbound messages. Time saved and production usage are not
-              claimed as verified business outcomes.
-            </p>
-          </div>
+<div class="evidence-slide" hidden>
+  <p><strong>03 — Poster-Rendering API Workflow</strong></p>
+  <p>The visible workflow for preparing campaign payloads and sending a request to the poster-rendering API. The screenshot alone does not verify a successful API response.</p>
+  <a href="assets/media/showcase/ai-marketing-automation-assets/03-ai-content-and-creative/workflow-n8n-03-campaign-builder-render-poster-api.png" target="_blank" rel="noopener noreferrer">
+    <img src="assets/media/showcase/ai-marketing-automation-assets/03-ai-content-and-creative/workflow-n8n-03-campaign-builder-render-poster-api.png" alt="Poster rendering API workflow" loading="lazy" style="display:block;width:100%;height:auto;border-radius:12px;">
+  </a>
+  <p><a href="assets/media/showcase/ai-marketing-automation-assets/03-ai-content-and-creative/workflow-n8n-03-campaign-builder-render-poster-api.png" target="_blank" rel="noopener noreferrer">Open full-size screenshot ↗</a></p>
+</div>
 
         </div>
 
-      </article>
+        <div class="evidence-gallery__controls" style="display:flex;gap:10px;align-items:center;margin-top:14px;">
+          <button type="button" data-gallery-prev disabled>← Previous</button>
+          <button type="button" data-gallery-next>Next →</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-study__block">
+      <span class="case-study__label">Result &amp; Limitations</span>
+      <p>
+        The portfolio demonstrates a campaign-planning document, visible
+        n8n workflow designs and sample marketing assets. A successful
+        end-to-end run, automated distribution, production deployment,
+        measured time savings and campaign performance have not been
+        established by the evidence presented here.
+      </p>
+    </div>
+
+
+<div class="case-study__block" id="extendedMarketingEvidence">
+  <span class="case-study__label">Additional Creative Evidence</span>
+  <p>Browse the additional campaign artwork, product advertisements, poster outputs and test iterations. Use Previous and Next to view one image at a time.</p>
+  <div class="asset-browser">
+    <div class="asset-carousel">
+      <div class="asset-carousel__stage" aria-live="polite">
+        <p class="asset-browser__status" role="status">Loading image inventory…</p>
+      </div>
+      <div class="asset-carousel__controls">
+        <button type="button" class="asset-carousel__prev">← Previous</button>
+        <span class="asset-carousel__count" aria-live="polite"></span>
+        <button type="button" class="asset-carousel__next">Next →</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</article>
 
 
       <!-- ==========================================
@@ -1328,7 +1406,7 @@ onclick="closeMedia()">
           <div class="timeline__content">
             <div class="timeline__header">
               <div>
-                <h3 class="timeline__role">Credit Risk Officer</h3>
+                <h3 class="timeline__role">Credit Risk Analyst</h3>
                 <p class="timeline__company">Spread Capital Limited · Nairobi, Kenya</p>
               </div>
               <span class="timeline__period">Current</span>
@@ -1362,7 +1440,84 @@ onclick="closeMedia()">
           </div>
         </div>
 
+                <div class="timeline__item">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <div>
+                <h3 class="timeline__role">Loss Control Officer</h3>
+                <p class="timeline__company">Quickmart Supermarket (Specific Talent Ltd.) · Machakos, Kenya</p>
+              </div>
+              <span class="timeline__period">Dec 2024 – Jun 2025</span>
+            </div>
+            <p class="timeline__summary">
+              Supported operational controls through field inspections, anomaly investigation,
+              and reconciliation of physical stock against system records.
+            </p>
+            <ul class="timeline__items">
+              <li>Investigated operational irregularities and identified recurring discrepancies for follow-up.</li>
+              <li>Performed cyclic stock counts and reconciled inventory against recorded balances.</li>
+            </ul>
+            <div class="timeline__stack">
+              <span class="tech-tag">Operational Controls</span>
+              <span class="tech-tag">Reconciliation</span>
+              <span class="tech-tag">Investigation</span>
+            </div>
+          </div>
+        </div>
+
         <div class="timeline__item">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <div>
+                <h3 class="timeline__role">Enumerator — Enhanced Single Registry</h3>
+                <p class="timeline__company">State Department for Social Protection & Senior Citizen Affairs · Gatundu, Kiambu</p>
+              </div>
+              <span class="timeline__period">Oct 2024</span>
+            </div>
+            <p class="timeline__summary">
+              Conducted structured household interviews and identity verification for the
+              Enhanced Single Registry project, validating records under confidentiality requirements.
+            </p>
+            <ul class="timeline__items">
+              <li>Verified household information and checked submitted details for completeness and consistency.</li>
+              <li>Collected and validated socio-economic data for more than 2,000 households within project timelines.</li>
+            </ul>
+            <div class="timeline__stack">
+              <span class="tech-tag">Data Validation</span>
+              <span class="tech-tag">Identity Verification</span>
+              <span class="tech-tag">Field Research</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <div>
+                <h3 class="timeline__role">Statistician Intern — Civil Registration Services</h3>
+                <p class="timeline__company">State Department for Immigration & Citizen Services · Nairobi, Kenya</p>
+              </div>
+              <span class="timeline__period">Apr 2023 – Apr 2024</span>
+            </div>
+            <p class="timeline__summary">
+              Supported statistical records management and data quality checks across 15 sub-counties,
+              helping maintain reliable records and reporting outputs.
+            </p>
+            <ul class="timeline__items">
+              <li>Entered and verified vital statistics records and audited datasets for errors, duplicates and inconsistencies.</li>
+              <li>Prepared variance and completion reports to communicate data quality and outstanding records.</li>
+            </ul>
+            <div class="timeline__stack">
+              <span class="tech-tag">Data Quality</span>
+              <span class="tech-tag">Records Management</span>
+              <span class="tech-tag">Reporting</span>
+            </div>
+          </div>
+        </div>
+<div class="timeline__item">
           <div class="timeline__marker"></div>
           <div class="timeline__content">
             <div class="timeline__header">
@@ -1529,6 +1684,217 @@ document.querySelectorAll("[data-evidence-gallery]").forEach(function (gallery) 
 
   showSlide(0);
 });
+</script>
+
+<script>
+/* FIX: unified evidence viewer */
+(function () {
+  const gallery = document.querySelector('[data-evidence-gallery="marketing"]');
+  const modal = document.getElementById("mediaModal");
+  const image = document.getElementById("modalImage");
+  const caption = document.getElementById("modalCaption");
+  const counter = document.getElementById("modalCounter");
+  const prev = document.getElementById("modalPrev");
+  const next = document.getElementById("modalNext");
+
+  if (!modal || !image || !caption || !counter || !prev || !next) {
+    console.error("Evidence viewer setup failed: required element missing.");
+    return;
+  }
+
+  let items = [];
+  let current = 0;
+  let lastFocused = null;
+
+  function render() {
+    if (!items.length || !items[current]) return;
+    const item = items[current];
+    image.src = item.src;
+    image.alt = item.alt || item.title || "Evidence image";
+    caption.textContent = item.title || "Evidence image";
+    counter.textContent = (current + 1) + " of " + items.length;
+    prev.disabled = items.length < 2;
+    next.disabled = items.length < 2;
+  }
+
+  window.openEvidenceViewer = function (list, index) {
+    if (!Array.isArray(list) || !list.length) return;
+    items = list.filter(item => item && item.src);
+    if (!items.length) return;
+
+    current = Math.max(0, Math.min(Number(index) || 0, items.length - 1));
+    lastFocused = document.activeElement;
+    render();
+    modal.style.display = "flex";
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("poster-viewer-open");
+    modal.querySelector(".media-modal__close")?.focus();
+  };
+
+  function move(delta) {
+    if (modal.getAttribute("aria-hidden") === "true" || !items.length) return;
+    current = (current + delta + items.length) % items.length;
+    render();
+  }
+
+  prev.addEventListener("click", () => move(-1));
+  next.addEventListener("click", () => move(1));
+
+  document.addEventListener("keydown", event => {
+    if (modal.getAttribute("aria-hidden") === "true") return;
+    if (event.key === "Escape") window.closeMedia();
+    if (event.key === "ArrowLeft") move(-1);
+    if (event.key === "ArrowRight") move(1);
+  });
+
+  window.closeMedia = function () {
+    modal.style.display = "none";
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("poster-viewer-open");
+    image.removeAttribute("src");
+    items = [];
+    if (lastFocused && typeof lastFocused.focus === "function") lastFocused.focus();
+  };
+
+  if (gallery) {
+    const slides = Array.from(gallery.querySelectorAll(".evidence-slide"));
+    const workflowItems = slides.map(slide => {
+      const img = slide.querySelector("img");
+      const title = slide.querySelector("strong");
+      return img ? {
+        src: img.getAttribute("src"),
+        alt: img.alt || (title ? title.textContent.trim() : "Workflow evidence"),
+        title: title ? title.textContent.trim() : "Workflow evidence"
+      } : null;
+    }).filter(Boolean);
+
+    slides.forEach((slide, index) => {
+      slide.querySelectorAll("a[href]").forEach(link => {
+        link.addEventListener("click", event => {
+          event.preventDefault();
+          window.openEvidenceViewer(workflowItems, index);
+        });
+      });
+    });
+
+    console.log("Workflow fullscreen viewer ready:", workflowItems.length, "items");
+  }
+})();
+</script>
+
+<script>
+(function () {
+  const browser = document.querySelector("#extendedMarketingEvidence .asset-browser");
+  if (!browser) return;
+
+  const stage = browser.querySelector(".asset-carousel__stage");
+  const previous = browser.querySelector(".asset-carousel__prev");
+  const next = browser.querySelector(".asset-carousel__next");
+  const count = browser.querySelector(".asset-carousel__count");
+  let current = 0;
+
+
+  const assets = [
+    { category: "campaign", title: "Boda-boda insurance", src: "assets/media/showcase/ai-marketing-automation-assets/01-campaigns/campaign-boda-boda-insurance-secure-your-ride.jpeg" },
+    { category: "campaign", title: "Customer Service Week — champions", src: "assets/media/showcase/ai-marketing-automation-assets/01-campaigns/campaign-customer-service-week-celebrating-champions-hands-cropped.jpeg" },
+    { category: "campaign", title: "Customer Service Week — hands", src: "assets/media/showcase/ai-marketing-automation-assets/01-campaigns/campaign-customer-service-week-celebrating-champions-hands-visible.jpeg" },
+    { category: "campaign", title: "Customer Service Week — spreading success", src: "assets/media/showcase/ai-marketing-automation-assets/01-campaigns/campaign-customer-service-week-spreading-success-transforming-tomorrows.jpeg" },
+    { category: "campaign", title: "Customer Service Week — financing growth", src: "assets/media/showcase/ai-marketing-automation-assets/01-campaigns/campaign-customer-service-week-team-photo-financing-your-growth.jpeg" },
+    { category: "campaign", title: "Customer Service Week — transacting to transform", src: "assets/media/showcase/ai-marketing-automation-assets/01-campaigns/campaign-customer-service-week-team-photo-transacting-to-transform.jpeg" },
+    { category: "campaign", title: "Relationship Officer recruitment", src: "assets/media/showcase/ai-marketing-automation-assets/01-campaigns/campaign-recruitment-relationship-officer-hiring.jpeg" },
+    { category: "campaign", title: "Referral campaign — story format", src: "assets/media/showcase/ai-marketing-automation-assets/01-campaigns/campaign-referral-contacts-earn-money-story-format.jpeg" },
+    { category: "campaign", title: "Referral commission — Mercedes", src: "assets/media/showcase/ai-marketing-automation-assets/01-campaigns/campaign-referral-earn-4-percent-commission-mercedes-call-carol.jpeg" },
+    { category: "campaign", title: "Referral commission — rewards dashboard", src: "assets/media/showcase/ai-marketing-automation-assets/01-campaigns/campaign-referral-earn-4-percent-commission-rewards-dashboard.jpeg" },
+    { category: "campaign", title: "Referral commission — Prado", src: "assets/media/showcase/ai-marketing-automation-assets/01-campaigns/campaign-referral-earn-4-percent-prado-branch-contacts.jpeg" },
+    { category: "campaign", title: "Referral commission — internal campaign", src: "assets/media/showcase/ai-marketing-automation-assets/01-campaigns/campaign-referral-earn-4-percent-prado-internal-campaign.jpeg" },
+    { category: "campaign", title: "Business expansion referral", src: "assets/media/showcase/ai-marketing-automation-assets/01-campaigns/campaign-referral-help-a-business-grow-equipment-expansion.jpeg" },
+    { category: "campaign", title: "Project Atlas referral", src: "assets/media/showcase/ai-marketing-automation-assets/01-campaigns/campaign-referral-help-a-business-grow-project-atlas-call-carol.jpeg" },
+    { category: "campaign", title: "Referral network — commission", src: "assets/media/showcase/ai-marketing-automation-assets/01-campaigns/campaign-referral-network-earn-more-4-percent-call-carol.jpeg" },
+    { category: "campaign", title: "Loan referral network", src: "assets/media/showcase/ai-marketing-automation-assets/01-campaigns/campaign-referral-network-earn-more-loan-referral-call-carol.jpeg" },
+    { category: "campaign", title: "Salary advance", src: "assets/media/showcase/ai-marketing-automation-assets/01-campaigns/campaign-salary-advance-bridge-the-mid-month-gap.jpeg" },
+    { category: "campaign", title: "Logbook loans", src: "assets/media/showcase/ai-marketing-automation-assets/01-campaigns/campaign-spread-capital-empowering-success-logbook-loans-call-carol.jpeg" },
+
+    { category: "product", title: "Autocents ball joint — K13", src: "assets/media/showcase/ai-marketing-automation-assets/02-product-advertisements/product-autocents-ball-joint-k13-new-model.jpg" },
+    { category: "product", title: "Autocents Mazda ball joint — white", src: "assets/media/showcase/ai-marketing-automation-assets/02-product-advertisements/product-autocents-ball-joint-mazda-plain-white.jpeg" },
+    { category: "product", title: "Autocents Mazda ball joint — duplicate variant", src: "assets/media/showcase/ai-marketing-automation-assets/02-product-advertisements/product-autocents-ball-joint-mazda-plain-white-duplicate.jpeg" },
+    { category: "product", title: "Autocents Mazda ball joint — fade", src: "assets/media/showcase/ai-marketing-automation-assets/02-product-advertisements/product-autocents-ball-joint-mazda-single-fade.jpeg" },
+    { category: "product", title: "Autocents Mazda ball joint — split", src: "assets/media/showcase/ai-marketing-automation-assets/02-product-advertisements/product-autocents-ball-joint-mazda-single-split.jpeg" },
+    { category: "product", title: "Autocents Mazda suspension artwork", src: "assets/media/showcase/ai-marketing-automation-assets/02-product-advertisements/product-autocents-ball-joint-mazda-suspension-art.jpeg" },
+    { category: "product", title: "Autocents Mazda ball joint — triple split", src: "assets/media/showcase/ai-marketing-automation-assets/02-product-advertisements/product-autocents-ball-joint-mazda-triple-split.jpg" },
+    { category: "product", title: "Autocents LED projector — dark", src: "assets/media/showcase/ai-marketing-automation-assets/02-product-advertisements/product-autocents-led-projector-dark-headlight.jpeg" },
+    { category: "product", title: "Autocents LED projector — pair", src: "assets/media/showcase/ai-marketing-automation-assets/02-product-advertisements/product-autocents-led-projector-dark-two-units.jpg" },
+    { category: "product", title: "Autocents LED projector — light fade", src: "assets/media/showcase/ai-marketing-automation-assets/02-product-advertisements/product-autocents-led-projector-light-fade-pair.jpg" },
+    { category: "product", title: "Autocents LED projector — red housing", src: "assets/media/showcase/ai-marketing-automation-assets/02-product-advertisements/product-autocents-led-projector-logo-tile-red-housing.jpeg" },
+    { category: "product", title: "Autocents LED projector — orange swoosh", src: "assets/media/showcase/ai-marketing-automation-assets/02-product-advertisements/product-autocents-led-projector-orange-swoosh.jpg" },
+    { category: "product", title: "Autocents water pump — dark", src: "assets/media/showcase/ai-marketing-automation-assets/02-product-advertisements/product-autocents-water-pump-dark-logo-tile.jpg" },
+    { category: "product", title: "Autocents water pump — engine bay", src: "assets/media/showcase/ai-marketing-automation-assets/02-product-advertisements/product-autocents-water-pump-engine-bay-gradient.jpg" },
+    { category: "product", title: "Autocents water pump — light header", src: "assets/media/showcase/ai-marketing-automation-assets/02-product-advertisements/product-autocents-water-pump-light-header.jpg" },
+
+
+    { category: "poster", title: "Referral contacts — poster output", src: "assets/media/showcase/ai-marketing-automation-assets/04-branded-poster-outputs/campaign-referral-contacts-earn-money-template-render.png" },
+    { category: "poster", title: "SME business protection — poster output", src: "assets/media/showcase/ai-marketing-automation-assets/04-branded-poster-outputs/campaign-sme-business-protection-template-render.png" },
+    { category: "poster", title: "Women in business — poster output", src: "assets/media/showcase/ai-marketing-automation-assets/04-branded-poster-outputs/campaign-women-in-business-template-render.png" },
+
+    { category: "test", title: "Referral contacts — test iteration", src: "assets/media/showcase/ai-marketing-automation-assets/06-tests-and-iterations/test-referral-contacts-earn-money-call-cate-story.png" },
+    { category: "test", title: "Business growth referral — test iteration", src: "assets/media/showcase/ai-marketing-automation-assets/06-tests-and-iterations/test-referral-help-a-business-grow-call-cate.png" },
+    { category: "test", title: "Referral network — test iteration", src: "assets/media/showcase/ai-marketing-automation-assets/06-tests-and-iterations/test-referral-network-earn-more-call-cate.jpeg" }
+  ];
+
+  function renderSlide() {
+    const asset = assets[current];
+    if (!asset || !stage) return;
+
+    stage.replaceChildren();
+
+    const card = document.createElement("button");
+    card.type = "button";
+    card.className = "asset-carousel__image-button";
+    card.setAttribute("aria-label", "Open full-size image: " + asset.title);
+
+    const img = document.createElement("img");
+    img.src = asset.src;
+    img.alt = asset.title;
+    img.loading = "lazy";
+
+    img.addEventListener("error", () => {
+      img.alt = asset.title + " — image failed to load";
+      card.classList.add("asset-carousel__image--broken");
+    });
+
+    card.appendChild(img);
+    card.addEventListener("click", () => {
+      if (typeof window.openEvidenceViewer === "function") {
+        window.openEvidenceViewer(assets, current);
+      } else {
+        console.error("Fullscreen evidence viewer is not available.");
+      }
+    });
+
+    const title = document.createElement("p");
+    title.className = "asset-carousel__title";
+    title.textContent = asset.title;
+
+    const category = document.createElement("p");
+    category.className = "asset-carousel__category";
+    category.textContent = asset.category;
+
+    stage.append(card, title, category);
+
+    count.textContent = (current + 1) + " / " + assets.length;
+  }
+
+  previous.addEventListener("click", () => {
+    current = (current - 1 + assets.length) % assets.length;
+    renderSlide();
+  });
+
+  next.addEventListener("click", () => {
+    current = (current + 1) % assets.length;
+    renderSlide();
+  });
+
+  renderSlide();
+})();
 </script>
 </body>
 </html>

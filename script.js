@@ -256,3 +256,42 @@ if (footerCopy) {
   const year = new Date().getFullYear();
   footerCopy.textContent = footerCopy.textContent.replace('2025', String(year));
 }
+
+// Simple project ribbon arrow navigation
+(function () {
+  const wrapper = document.querySelector('.showcase-wrapper');
+  const track = wrapper?.querySelector('.showcase-track');
+  const prev = wrapper?.querySelector('[data-ribbon-prev]');
+  const next = wrapper?.querySelector('[data-ribbon-next]');
+
+  if (!wrapper || !track || !prev || !next) return;
+
+  function moveRibbon(direction) {
+    const animation = track.getAnimations().find(
+      item => item.animationName === 'scrollMedia'
+    );
+
+    if (!animation) {
+      console.warn('Showcase autoplay animation not found.');
+      return;
+    }
+
+    const duration = Number(animation.effect.getTiming().duration) || 35000;
+    const cards = track.querySelectorAll('.showcase-card');
+    const firstCard = cards[0];
+
+    if (!firstCard) return;
+
+    const stepDistance = firstCard.getBoundingClientRect().width + 25;
+    const totalDistance = Math.max(1, track.scrollWidth / 2);
+    const stepTime = (stepDistance / totalDistance) * duration;
+
+    let currentTime = Number(animation.currentTime) || 0;
+    currentTime = ((currentTime + direction * stepTime) % duration + duration) % duration;
+
+    animation.currentTime = currentTime;
+  }
+
+  prev.addEventListener('click', () => moveRibbon(-1));
+  next.addEventListener('click', () => moveRibbon(1));
+})();
