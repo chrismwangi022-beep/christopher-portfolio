@@ -1,0 +1,47 @@
+﻿Asset ID,Original filename,New relative path,Reason for rename
+A01,Auto Water Pump Sample (2).jpg,02-product-advertisements/product-autocents-water-pump-engine-bay-gradient.jpg,"Generic ""Sample"" name replaced with brand + product + background treatment that distinguishes this variant"
+A02,Auto Water Pump Sample (3).jpg,02-product-advertisements/product-autocents-water-pump-dark-logo-tile.jpg,Distinguished from sibling water-pump variants by the dark background and white logo tile
+A03,Auto Water Pump Sample.jpg,02-product-advertisements/product-autocents-water-pump-light-header.jpg,Distinguished from sibling water-pump variants by the light header
+A04,Ball Joint Sample (2).jpeg,02-product-advertisements/product-autocents-ball-joint-mazda-single-fade.jpeg,Variant with a single large ball joint and white-to-navy fade
+A05,Ball Joint Sample (2).jpg,02-product-advertisements/product-autocents-ball-joint-mazda-triple-split.jpg,Variant showing three ball joints with a split white/dark layout
+A06,Ball Joint Sample (3).jpeg,02-product-advertisements/product-autocents-ball-joint-mazda-plain-white.jpeg,Plain-white variant; kept as the primary of an exact duplicate pair
+A07,Ball Joint Sample (4).jpeg,02-product-advertisements/product-autocents-ball-joint-mazda-single-split.jpeg,Variant with a single ball joint and a split layout
+A08,Ball Joint Sample.jpeg,02-product-advertisements/product-autocents-ball-joint-mazda-suspension-art.jpeg,Variant with full-bleed suspension artwork; canvas size differs from siblings
+A09,Ball Joint Sample.jpg,02-product-advertisements/product-autocents-ball-joint-k13-new-model.jpg,"Only ad with a different headline (K13 new model), so it is kept distinct from the Mazda ball-joint set"
+A10,Led Dual Beam Projector Sample (2).jpeg,02-product-advertisements/product-autocents-led-projector-dark-headlight.jpeg,Dark variant with single projector against a vehicle headlight
+A11,Led Dual Beam Projector Sample (2).jpg,02-product-advertisements/product-autocents-led-projector-light-fade-pair.jpg,Light-fade variant showing a pair of projectors
+A12,Led Dual Beam Projector Sample (3).jpg,02-product-advertisements/product-autocents-led-projector-dark-two-units.jpg,Dark variant with two different projector units
+A13,Led Dual Beam Projector Sample.jpeg,02-product-advertisements/product-autocents-led-projector-logo-tile-red-housing.jpeg,Variant with a white logo tile and a red-housing twin-lens projector
+A14,Led Dual Beam Projector Sample.jpg,02-product-advertisements/product-autocents-led-projector-orange-swoosh.jpg,Dark variant with an orange swoosh and two projector photos
+A15,WhatsApp Image 2026-08-07 at 20.40.52 (1).jpeg,01-campaigns/campaign-spread-capital-empowering-success-logbook-loans-call-carol.jpeg,Brand-awareness poster; headline and the named agent contact identify it
+A16,WhatsApp Image 2026-08-07 at 20.40.52 (2).jpeg,01-campaigns/campaign-referral-network-earn-more-loan-referral-call-carol.jpeg,Referral campaign; headline and agent contact in the name
+A17,WhatsApp Image 2026-08-07 at 20.40.52 (3).jpeg,01-campaigns/campaign-referral-earn-4-percent-commission-mercedes-call-carol.jpeg,Referral campaign with the 4% headline and Mercedes scene
+A18,WhatsApp Image 2026-08-07 at 20.40.52 (4).jpeg,01-campaigns/campaign-referral-help-a-business-grow-project-atlas-call-carol.jpeg,"Referral campaign naming ""Project Atlas"""
+A19,WhatsApp Image 2026-08-07 at 20.40.52.jpeg,01-campaigns/campaign-referral-network-earn-more-4-percent-call-carol.jpeg,Referral campaign with the shorter headline and 4% sub-head
+A20,WhatsApp Image 2026-10-02 at 16.09.19.jpeg,07-unclassified/banner-moh-vibes-cheers-liquor-wines-spirits-beers.jpeg,Banner for a different business; kept in 07 because its role in the project is not established
+A21,WhatsApp Image 2026-10-06 at 00.15.21.jpeg,01-campaigns/campaign-customer-service-week-spreading-success-transforming-tomorrows.jpeg,Customer Service Week poster; headline in the name
+A22,WhatsApp Image 2026-10-06 at 00.15.23 (1).jpeg,01-campaigns/campaign-customer-service-week-celebrating-champions-hands-visible.jpeg,Distinguished from A24 by the visible clasped hands
+A23,WhatsApp Image 2026-10-06 at 00.15.23 (2).jpeg,01-campaigns/campaign-customer-service-week-team-photo-transacting-to-transform.jpeg,"Distinguished from A25 by the ""Transacting to transform"" footer tagline"
+A24,WhatsApp Image 2026-10-06 at 00.15.23.jpeg,01-campaigns/campaign-customer-service-week-celebrating-champions-hands-cropped.jpeg,Distinguished from A22 by hidden hands
+A25,WhatsApp Image 2026-10-06 at 00.15.24.jpeg,01-campaigns/campaign-customer-service-week-team-photo-financing-your-growth.jpeg,"Distinguished from A23 by the ""Financing your growth"" footer tagline"
+A26,WhatsApp Image 2026-10-17 at 10.53.38.jpeg,01-campaigns/campaign-referral-earn-4-percent-prado-branch-contacts.jpeg,Referral poster with a branch contact grid and the Prado hero image
+A27,WhatsApp Image 2026-10-17 at 10.53.39 (1).jpeg,01-campaigns/campaign-recruitment-relationship-officer-hiring.jpeg,Recruitment poster for the Relationship Officer role
+A28,WhatsApp Image 2026-10-17 at 10.53.39 (2).jpeg,01-campaigns/campaign-referral-contacts-earn-money-story-format.jpeg,Vertical story-format referral poster; headline in the name
+A29,WhatsApp Image 2026-10-17 at 10.53.39 (3).jpeg,01-campaigns/campaign-referral-earn-4-percent-commission-rewards-dashboard.jpeg,Referral poster with a rewards-dashboard tablet prop
+A30,WhatsApp Image 2026-10-17 at 10.53.39.jpeg,01-campaigns/campaign-referral-earn-4-percent-prado-internal-campaign.jpeg,Internal-campaign variant of the Prado referral poster
+A31,WhatsApp Image 2026-10-17 at 10.53.40 (1).jpeg,01-campaigns/campaign-salary-advance-bridge-the-mid-month-gap.jpeg,Salary-advance product poster
+A32,WhatsApp Image 2026-10-17 at 10.53.40.jpeg,01-campaigns/campaign-referral-help-a-business-grow-equipment-expansion.jpeg,Referral poster with an equipment/industrial scene
+A33,WhatsApp Image 2026-10-17 at 10.53.41 (1).jpeg,07-unclassified/brand-moonbeam-lifting-solutions-logo.jpeg,Separate brand identity not tied to Spread Capital or AUTOCENTS marketing
+A34,WhatsApp Image 2026-10-17 at 10.53.41 (2).jpeg,07-unclassified/brand-moonbeam-lifting-solutions-banner-line-art-draft.jpeg,Greyscale draft of the Moonbeam header banner
+A35,WhatsApp Image 2026-10-17 at 10.53.41 (3).jpeg,07-unclassified/brand-moonbeam-lifting-solutions-banner-colour-draft.jpeg,Colour draft of the Moonbeam header banner
+A36,WhatsApp Image 2026-10-17 at 10.53.41.jpeg,01-campaigns/campaign-boda-boda-insurance-secure-your-ride.jpeg,Boda boda insurance poster
+A37,WhatsApp Image 2026-10-17 at 10.53.42.jpeg,02-product-advertisements/product-autocents-ball-joint-mazda-plain-white-duplicate.jpeg,Original name is a WhatsApp timestamp; renamed as an exact duplicate of A06 and retained
+A38,creative engine content 1.png,03-ai-content-and-creative/workflow-n8n-02-creative-engine-sheet-to-campaign-builder-running.png,"Describes the screenshot content (workflow name, flow and running state) rather than the original generic ""creative engine content"" name"
+A39,creative engine content 2.png,03-ai-content-and-creative/workflow-n8n-03-campaign-builder-render-poster-api.png,Describes the workflow name and the render call it contains
+A40,creative engine content.png,03-ai-content-and-creative/workflow-n8n-02-creative-engine-sheet-to-campaign-builder-idle.png,"Idle-state view of the same workflow as the ""running"" screenshot"
+A41,july-referral-awareness-campaign.png,04-branded-poster-outputs/campaign-referral-contacts-earn-money-template-render.png,"Original name ""july-referral-awareness-campaign"" kept in spirit; ""template-render"" records that it has no photo"
+A42,sme-business-protection.png,04-branded-poster-outputs/campaign-sme-business-protection-template-render.png,"Original name ""sme-business-protection"" retained and prefixed with campaign and render type"
+A43,test_03Cate.jpeg,06-tests-and-iterations/test-referral-network-earn-more-call-cate.jpeg,"Original ""test_03Cate.jpeg"" indicates a test with agent Cate; renamed by content so it is not confused with A44"
+A44,test_03Cate.png,06-tests-and-iterations/test-referral-contacts-earn-money-call-cate-story.png,"Original ""test_03Cate.png"" shares a stem with A43 but is a different design; renamed by content"
+A45,test_05Cate.png,06-tests-and-iterations/test-referral-help-a-business-grow-call-cate.png,"Original ""test_05Cate.png"" indicates test 05 with agent Cate"
+A46,women-in-business.png,04-branded-poster-outputs/campaign-women-in-business-template-render.png,"Original name ""women-in-business"" retained and prefixed with campaign and render type"
